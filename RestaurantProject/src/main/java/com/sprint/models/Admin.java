@@ -46,10 +46,7 @@ public class Admin {
 	//@JoinColumn(name = "transaction_id")
 	private List<Transaction> transaction;
 	
-	@JsonIgnore
-	@OneToMany(mappedBy = "admin", fetch = FetchType.LAZY)
-	//@JoinColumn(name = "customer_id")
-	private List<Customer> customer;
+	
 	
 	@JsonIgnore
 	@OneToMany(mappedBy="admin")

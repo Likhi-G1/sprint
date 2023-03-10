@@ -25,25 +25,7 @@ public class AdminImpl implements AdminService{
 	@Autowired
 	private TransactionRepository transactionRepository;
 	
-//	// Email regex pattern
-//	private static final String regex = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$";
-//	 
-//	 // Password regex pattern
-//	private static final String regex1 ="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8,20}";
-//
-//	public Admin registerAdmin(Admin admin) throws InvalidEmailPasswordException {
-//		Admin a=null;
-//		if(!(Pattern.matches(regex, admin.getEmailId())))
-//		{
-//			throw new InvalidEmailPasswordException();
-//		}
-//		else if(!(Pattern.matches(regex1, admin.getPassword())))
-//		{
-//			throw new InvalidEmailPasswordException();
-//		}
-//		a= adminRepository.save(admin);
-//		return a;
-//	}
+
 	public Admin registerAdmin(Admin admin) {
 		return adminRepository.save(admin);
 	}

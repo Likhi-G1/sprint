@@ -71,23 +71,7 @@ class AdminEntityTests {
         assertEquals(transaction2, admin.getTransaction().get(1));
     }
     
-    @Test
-    @DisplayName("Test Admin customer list")
-    void testCustomerList() {
-        List<Customer> customers = new ArrayList<>();
-        Customer customer1 = new Customer();
-        customer1.setCustomerId(1L);
-        Customer customer2 = new Customer();
-        customer2.setCustomerId(2L);
-        customers.add(customer1);
-        customers.add(customer2);
-        
-        admin.setCustomer(customers);
-        
-        assertEquals(2, admin.getCustomer().size());
-        assertEquals(customer1, admin.getCustomer().get(0));
-        assertEquals(customer2, admin.getCustomer().get(1));
-    }
+   
     
     @Test
     @DisplayName("Test Admin restaurant set")

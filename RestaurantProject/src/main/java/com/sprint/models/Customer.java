@@ -41,10 +41,7 @@ private String emailId;
 @Column(name="password")
 private String password;
 
-//@JsonIgnoreProperties("customer")
-//@ManyToMany(cascade = CascadeType.ALL)
-//@JoinTable(name = "Customer_Transaction", joinColumns = { @JoinColumn(name = "customer_id") }, inverseJoinColumns = { @JoinColumn(name = "transaction_id") })
-//private Set<Transaction> transaction=new HashSet<>();
+
 
 @JsonIgnore
 @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
@@ -54,9 +51,6 @@ private List<Transaction> transactions;
 @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
 private List<Booking> booking;
 
-@JsonIgnore
-@ManyToOne
- @JoinColumn(name = "admin_id")
- private Admin admin;
+
 
 }

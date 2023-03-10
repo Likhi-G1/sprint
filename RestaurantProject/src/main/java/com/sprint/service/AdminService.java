@@ -11,7 +11,7 @@ public interface AdminService {
 	
 	public Admin registerAdmin(Admin admin) throws InvalidCredentialsException, InvalidEmailPasswordException;
 	public String loginAdmin(String email,String password) throws InvalidCredentialsException;
-	//public double discountsForCustomers(Long customerId)throws CustomerNotFoundException;
+	
 	public double calculateMoneySpent(long customerId)throws CustomerNotFoundException, BookingNotFoundException,TransactionRecordNotFoundException;
 	
 }

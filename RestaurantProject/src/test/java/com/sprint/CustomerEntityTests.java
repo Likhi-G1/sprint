@@ -25,7 +25,7 @@ public class CustomerEntityTests {
         customer.setPassword("password123");
         customer.setTransactions(new ArrayList<>());
         customer.setBooking(new ArrayList<>());
-        customer.setAdmin(new Admin());
+       
     }
  
     @Test
@@ -65,9 +65,6 @@ public class CustomerEntityTests {
         assertEquals(new ArrayList<>(), customer.getBooking());
     }
  
-    @Test
-    public void testAdmin() {
-        assertNotNull(customer.getAdmin());
-    }
+   
  
 }

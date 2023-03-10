@@ -15,8 +15,6 @@ import com.sprint.models.Booking;
 public interface BookingRepository extends JpaRepository<Booking,Long>{
 	List<Booking> findByDate(@Param("startDate")LocalDate date);
 	
-//	@Query("SELECT b FROM Booking b WHERE b.date = :date AND b.time = :time AND b.numberOfGuests = :numberOfGuests AND b.tableNumber = :tableNumber")
-//	List<Booking> findByDateTimeAndNumberOfGuestsAndTableNumber(@Param("date") LocalDate date, @Param("time") LocalTime time, @Param("numberOfGuests") int numberOfGuests, @Param("tableNumber") int tableNumber);
 
 	List<Booking> findByTableNumberAndDate(int tableNumber, LocalDate date);
 	
